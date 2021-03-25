@@ -1,3 +1,6 @@
+const moment = require('moment')
+moment.locale('zh-cn')
+
 module.exports = {
   title: '三月风的 doc 文档',
   description: '海阔凭鱼跃，山高任鸟飞',
@@ -5,6 +8,15 @@ module.exports = {
     ['link', { rel: 'icon', href: '/favicon.ico' }],
     ['meta', { name: 'author', content: '三月风' }],
     ['meta', { name: 'keywords', content: 'vuepress 三月风，的文档笔记' }]
+  ],
+  plugins: [
+    '@vuepress/last-updated',
+    {
+      transformer: (timestamp) => {
+        // 不要忘了安装 moment
+        return moment(timestamp).format('LLLL')
+      }
+    }
   ],
   themeConfig: {
     lastUpdated: '更新时间',
@@ -30,16 +42,21 @@ module.exports = {
       },
       { text: 'GitHub', link: 'https://github.com/mysanyue' },
     ],
-    sidebar: {
-      title: '美丽的 css', // 必要的
-      path: '/css/', // 可选的, 标题的跳转链接，应为绝对路径且必须存在
-      collapsable: false, // 可选的, 默认值是 true,
-      sidebarDepth: 1, // 可选的, 默认值是 1
-      children: [
-        '/css/c-a',
-        '/css/c-b',
-        '/css/c-c'
-      ]
-    },
+    sidebar: [
+      'js',
+      'js2',
+      '/about/',
+      {
+        title: '美丽的 css', // 必要的
+        path: '/css/', // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+        collapsable: false, // 可选的, 默认值是 true,
+        sidebarDepth: 1, // 可选的, 默认值是 1
+        children: [
+          '/css/c-a',
+          '/css/c-b',
+          '/css/c-c'
+        ]
+      },
+    ]
   }
 }
