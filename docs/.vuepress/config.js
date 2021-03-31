@@ -2,7 +2,7 @@ const moment = require('moment')
 moment.locale('zh-cn')
 
 module.exports = {
-  base: '/docs/',
+  // base: '/docs/',
   title: '三月风的 doc 文档',
   description: '海阔凭鱼跃，山高任鸟飞',
   head: [
