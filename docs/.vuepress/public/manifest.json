@@ -1,0 +1,9 @@
+{
+  "name": "三月风",
+  "short_name": "myzony@qq.com",
+  "lang": "zh-CN",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#fff",
+  "theme": "#3eaf7c"
+}
