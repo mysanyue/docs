@@ -1,7 +1,7 @@
 const head = require('./config/head')
 const plugins = require('./config/plugins')
 const nav = require('./config/nav')
-const sidebar = require('./config/sideBar')
+const sidebar = require('./config/sidebar')
 
 module.exports = {
   // base: '/docs/',
@@ -16,7 +16,6 @@ module.exports = {
     lastUpdated: '更新时间',
     logo: '/assets/logo.gif',
     nav,
-    sidebar,
-    sidebarDepth: 2
+    sidebar
   }
 }

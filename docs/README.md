@@ -4,7 +4,7 @@ home: true
 heroText: 前端笔记
 tagline: 欢迎阅读
 actionText: 开始探索 →
-actionLink: /home
+actionLink: /lagou/
 features:
 - title: 面试题整理
   details: 整理收集的各种前端面试题

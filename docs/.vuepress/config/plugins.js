@@ -5,7 +5,7 @@ module.exports = [
   ['@vuepress/last-updated', {
     transformer: (timestamp) => {
       // 不要忘了安装 moment
-      return moment(timestamp).format('LLLL')
+      return moment(timestamp).format('llll')
     }
   }],
   ['@vuepress/pwa', {

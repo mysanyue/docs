@@ -1,7 +1,6 @@
 module.exports = [
   { text: '首页', link: '/' },
-  { text: '面试题', link: '/interview' },
-  { text: '前端基础', link: '/basics' },
-  { text: '开发笔记', link: '/note' },
+  { text: '拉钩-面试题', link: '/lagou/' },
+  { text: '其他-面试题', link: '/base/' },
   { text: 'GitHub', link: 'https://github.com/mysanyue/docs' },
 ]
