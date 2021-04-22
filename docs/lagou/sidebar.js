@@ -1,5 +1,5 @@
 module.exports = [{
-    title: 'Promise 类面试题',
+    title: 'Promise 面试题',
     collapsable: true,
     children: [
       '/lagou/promise/输出打印1',
