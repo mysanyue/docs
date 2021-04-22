@@ -5,14 +5,18 @@ const sidebar = require('./config/sideBar')
 
 module.exports = {
   // base: '/docs/',
-  title: '三月风的 doc 文档',
+  title: '三月风',
   description: '海阔凭鱼跃，山高任鸟飞',
+  // markdown: {
+  //   lineNumbers: true, // 代码行号
+  // },
   head,
   plugins,
   themeConfig: {
     lastUpdated: '更新时间',
     logo: '/assets/logo.gif',
     nav,
-    sidebar
+    sidebar,
+    sidebarDepth: 2
   }
 }

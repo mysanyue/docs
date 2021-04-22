@@ -1,16 +1,16 @@
 ---
 home: true
-heroImage: /hero.png
-heroText: Hero 标题
-tagline: Hero 副标题
-actionText: 快速上手 →
-actionLink: /zh/guide/
+# heroImage: /assets/logo.jpg
+heroText: 前端笔记
+tagline: 欢迎阅读
+actionText: 开始探索 →
+actionLink: /home
 features:
-- title: 简洁至上
-  details: 以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。
-- title: Vue驱动
-  details: 享受 Vue + webpack 的开发体验，在 Markdown 中使用 Vue 组件，同时可以使用 Vue 来开发自定义主题。
-- title: 高性能
-  details: VuePress 为每个页面预渲染生成静态的 HTML，同时在页面被加载的时候，将作为 SPA 运行。
-footer: MIT Licensed | Copyright © 2018-present Evan You
+- title: 面试题整理
+  details: 整理收集的各种前端面试题
+- title: 开发技巧整理
+  details: 开发过程中，遇到的问题以及整理成的笔记
+- title: 前端基础
+  details: 前端开发必备的基础知识
+footer: Copyright © 2021-present sanyuefeng - myzony@qq.com
 ---
