@@ -1,10 +1,15 @@
 module.exports = [{
-    title: 'Promise 面试题',
+    title: 'gitee 仓库的面试题',
     collapsable: true,
     children: [
-      '/lagou/promise/输出打印1',
-      '/lagou/promise/输出打印2',
-      '/lagou/promise/promise编程',
+      '/lagou/gitee/20201023',
+      '/lagou/gitee/20201024',
+      '/lagou/gitee/20201026',
+      '/lagou/gitee/20201027',
+      '/lagou/gitee/20201029',
+      '/lagou/gitee/20201102',
+      '/lagou/gitee/20201105',
+      '/lagou/gitee/20201110'
     ]
   },
   // {
