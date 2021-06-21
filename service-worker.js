@@ -27,7 +27,7 @@ self.addEventListener('message', (event) => {
 self.__precacheManifest = [
   {
     "url": "404.html",
-    "revision": "4254152d7e29cf63c60e727f5b935ccb"
+    "revision": "ec9fad33df7ef51e0f343822b371fef0"
   },
   {
     "url": "assets/403.png",
@@ -42,96 +42,104 @@ self.__precacheManifest = [
     "revision": "d81e8d388d0ef7b148c3fbe1ac64a6d3"
   },
   {
-    "url": "assets/css/0.styles.d9172712.css",
-    "revision": "b463e6bdfcc984e8b2745dfe2b74c335"
+    "url": "assets/css/0.styles.4230e9f4.css",
+    "revision": "d79fa73a1f4055b9348d6a1549f7bb42"
+  },
+  {
+    "url": "assets/images/box.png",
+    "revision": "16ab12186cf69a06ebd4a8c7410320dc"
   },
   {
     "url": "assets/img/search.83621669.svg",
     "revision": "83621669651b9a3d4bf64d1a670ad856"
   },
   {
-    "url": "assets/js/10.72aee74f.js",
-    "revision": "7766e0db93a428544a6047dcf9464edf"
+    "url": "assets/js/10.e6b344c2.js",
+    "revision": "deec66cd37e4e2fbee4ab1e4a722c164"
   },
   {
-    "url": "assets/js/11.6ba2ba2a.js",
-    "revision": "e800102d8b78704c5b9d912f562bceed"
+    "url": "assets/js/11.5cab05f0.js",
+    "revision": "1e3b8b03759d0d36e663d18fe325918d"
   },
   {
-    "url": "assets/js/12.4bb2bc56.js",
-    "revision": "0b8ae48318dc9cf430ce9495b9d39b80"
+    "url": "assets/js/12.c5c1c2ca.js",
+    "revision": "c74c97a5d7597a52fdb1a6d4844c4004"
   },
   {
-    "url": "assets/js/13.65637da3.js",
-    "revision": "e1a75870b2619028ba94112c964fbc42"
+    "url": "assets/js/13.6f82f3c7.js",
+    "revision": "77efb5428c9d593b035fc67b1ebe56d5"
   },
   {
-    "url": "assets/js/14.2c817e13.js",
-    "revision": "7898407846ea4c00c3eca8a98374f380"
+    "url": "assets/js/14.e489e2c0.js",
+    "revision": "6d47e51d1af6c29bf9fec4941f4bb308"
   },
   {
-    "url": "assets/js/15.70c286a8.js",
-    "revision": "6a5b60baea7f01341d47d72329bc36f1"
+    "url": "assets/js/15.be42f8ac.js",
+    "revision": "433e755d807e14662f5eea70dffbb38d"
   },
   {
-    "url": "assets/js/16.182203a3.js",
-    "revision": "0314616fbc0469c9ea51cbfe3a3d21a9"
+    "url": "assets/js/16.56b0005f.js",
+    "revision": "42b54d1f6499f5b8bac25ae7b18ec62d"
   },
   {
-    "url": "assets/js/17.07be6971.js",
-    "revision": "0ff0e5ef41de1e15d73664523217a0f7"
+    "url": "assets/js/17.8bf4b395.js",
+    "revision": "8a06834aa925275bdd28a9a4bf905b3a"
   },
   {
-    "url": "assets/js/18.c28253d3.js",
-    "revision": "d724f5bba78748879252b64421cad307"
+    "url": "assets/js/18.434a68dc.js",
+    "revision": "aaaefc69579b5ceff03010742ba4f8a5"
   },
   {
-    "url": "assets/js/19.044b018a.js",
-    "revision": "d1f4b51c5125b29550f217bcc8edc3d3"
+    "url": "assets/js/19.78cd33d7.js",
+    "revision": "b0a77d8a6a571db522226d505fbb9a6c"
   },
   {
-    "url": "assets/js/2.8a356b46.js",
-    "revision": "aedc6d4be19f4bc1bba4ff26dcdaa3d0"
+    "url": "assets/js/2.8751a15c.js",
+    "revision": "4328b319e4ebb541d88218cfb59fcdc1"
   },
   {
-    "url": "assets/js/20.8377691c.js",
-    "revision": "1d2eb0ba839a240068a65062edc6a596"
+    "url": "assets/js/20.c38a72d6.js",
+    "revision": "c5e24b5f03496b7ad3148ff9455fe9a6"
   },
   {
-    "url": "assets/js/21.42af7d60.js",
-    "revision": "79446686810486e5a919695a14a8c6c3"
+    "url": "assets/js/21.bab49707.js",
+    "revision": "824120ec0386bb0fdc090f198044463c"
+  },
+  {
+    "url": "assets/js/22.79696249.js",
+    "revision": "ae934e0cf168dd759f9840f903e825b0"
   },
   {
     "url": "assets/js/3.8abf82f5.js",
     "revision": "42d06aae7380fdbd1a420a14e1f6f06e"
   },
   {
-    "url": "assets/js/4.47d395df.js",
-    "revision": "6057c18af69f20ad30fb8bda904fdc1a"
+    "url": "assets/js/4.b9a5aaa1.js",
+    "revision": "b1e270c2a2ae0f28d103d11d08b31af4"
   },
   {
-    "url": "assets/js/5.a5643e96.js",
-    "revision": "3c942d47e0c4346cbdc3cc0c743ad081"
+    "url": "assets/js/5.7f0eb621.js",
+    "revision": "b11a747a84d24b6222b63874f5fe4d4c"
   },
   {
-    "url": "assets/js/6.9dc86913.js",
-    "revision": "b2b3ee3cb26da4ad99ad3313ae0f4a1a"
+    "url": "assets/js/6.929ba44f.js",
+    "revision": "b892367e0a5eee716e2ae233d747eeb3"
   },
   {
-    "url": "assets/js/7.1fa8c8f1.js",
-    "revision": "ef2ec0e9db8c2fb955cb8fbb33b92f9d"
+    "url": "assets/js/7.6b7619d7.js",
+    "revision": "dcfdbf395b35f0d43500aab5b3d36471"
   },
   {
-    "url": "assets/js/8.af1304ff.js",
-    "revision": "2c1ee88d54a7811d2e1f0335cd84ab83"
+    "url": "assets/js/8.b4947345.js",
+    "revision": "ed43bb5cf1a3540e45a7d97436e54a5e"
   },
   {
-    "url": "assets/js/9.99a53e74.js",
-    "revision": "bd64610daf607abdae5343c4d1352e70"
+    "url": "assets/js/9.e87d8020.js",
+    "revision": "dfcc419b51a99ab93cd19cbe193177d2"
   },
   {
-    "url": "assets/js/app.bdf650a0.js",
-    "revision": "912d591a05f4569790042ce7cb3c1f45"
+    "url": "assets/js/app.b30be8d7.js",
+    "revision": "b19477d4312a1dcbe3d451bd0b35300e"
   },
   {
     "url": "assets/logo.gif",
@@ -142,56 +150,60 @@ self.__precacheManifest = [
     "revision": "489f6773f1b42485c6f8befa6589fe46"
   },
   {
-    "url": "base/index.html",
-    "revision": "4ac79c14ee6d66eb0ccefe9289b47c15"
+    "url": "bigFactory/index.html",
+    "revision": "7c4fbfa5d8cb034b3f4869fae74442bf"
   },
   {
     "url": "home.html",
-    "revision": "e4a9e9f6bb2ba72e19310e4c42b4ea8b"
+    "revision": "c6ff1903548ca7e6fbbab1b4583c8d41"
   },
   {
     "url": "index.html",
-    "revision": "ff03764955ec9c05ba4a9f8acca6f513"
+    "revision": "f5eb881c8d8eb70b05f7d905f3b80318"
   },
   {
-    "url": "lagou/gitee/20201023.html",
-    "revision": "bb3db6ac1403babec919fca294e6245a"
+    "url": "intermediate/index.html",
+    "revision": "826950ebd7fcba9f0f94c44f8e77b9bf"
   },
   {
-    "url": "lagou/gitee/20201024.html",
-    "revision": "c52f49c5e8051634f14e6c1f6f8096da"
+    "url": "intermediate/principle/index.html",
+    "revision": "97a8175610c72273194bc89df17fd975"
   },
   {
-    "url": "lagou/gitee/20201026.html",
-    "revision": "50ea5e3fef785359d66bbe676b1abe25"
+    "url": "intermediate/vue/core.html",
+    "revision": "4777a7a1e335584c019c8faceadb819c"
   },
   {
-    "url": "lagou/gitee/20201027.html",
-    "revision": "c4181aa67cdac7dca7021130fbdd1651"
+    "url": "intermediate/vue/test.html",
+    "revision": "833758131c8f92e479472972954b108f"
   },
   {
-    "url": "lagou/gitee/20201029.html",
-    "revision": "432ee97c4ee25064b1db9cd85a25b219"
+    "url": "intermediate/vue/vueCode.html",
+    "revision": "4029e1d0e5b8e5f4b872181a310e5c96"
   },
   {
-    "url": "lagou/gitee/20201102.html",
-    "revision": "ad581a9f64c4faf037063381eafbadbb"
+    "url": "primary/css/index.html",
+    "revision": "b386d64c2de2bb3c70b53117a624d61c"
   },
   {
-    "url": "lagou/gitee/20201105.html",
-    "revision": "20a7bcad7996acd1fe4174a8c9e9fdc7"
+    "url": "primary/html/index.html",
+    "revision": "87ce7046aa094c92b2f29cd61cffe0ce"
   },
   {
-    "url": "lagou/gitee/20201110.html",
-    "revision": "4b4c4077121a88bb5c27c7827ea7d6b8"
+    "url": "primary/index.html",
+    "revision": "8bbc766081de7758859aaaa0e1fe2c89"
   },
   {
-    "url": "lagou/index.html",
-    "revision": "c2ea2163091750fc469d62ee6faaa630"
+    "url": "primary/js/index.html",
+    "revision": "72245fead9468c0b6cc147309f7ba1e2"
   },
   {
-    "url": "note/index.html",
-    "revision": "bc9889b19055792cc816ed054ee1a132"
+    "url": "primary/principle/index.html",
+    "revision": "a7739dabb541eb1ef0ed36ec7af362e4"
+  },
+  {
+    "url": "senior/index.html",
+    "revision": "25004628e0c509339b5ce773deac8c27"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
