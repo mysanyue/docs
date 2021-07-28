@@ -4,7 +4,7 @@ home: true
 heroText: 前端面试
 tagline: 为面试准备
 actionText: 开始刷题 →
-actionLink: /primary/
+actionLink: /web/
 features:
 - title: 面试题整理
   details: 整理收集的各种前端面试题
