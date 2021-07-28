@@ -14,7 +14,6 @@ module.exports = {
   plugins,
   themeConfig: {
     lastUpdated: '更新时间',
-    logo: '/assets/logo.gif',
     nav,
     sidebar
   }

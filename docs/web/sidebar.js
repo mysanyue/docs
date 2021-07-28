@@ -1,42 +1,41 @@
 module.exports = [{
-  title: '高级前端',
+  title: '面试题',
   collapsable: false,
   children: [{
     title: 'HTML',
     collapsable: true,
     children: [
-      // ['/part2/task1/engin', '工程化概论'],
-      // ['/part2/task1/struct', '自动化构建'],
+      ['/web/html/', 'html 基础'],
     ]
   }, {
     title: 'CSS',
     collapsable: true,
     children: [
-      // ['/part2/task2/module', '模块化开发'],
+      ['/web/css/', 'css 基础'],
     ]
   }, {
     title: 'JavaScript',
     collapsable: true,
     children: [
-      // ['/part2/summary/sum1', '总结 - Node流操作'],
+      ['/web/js/', 'js 基础'],
+      ['/web/js/js-base', 'js 基础深入'],
     ]
   }, {
     title: 'Vue',
     collapsable: true,
     children: [
-      // ['/intermediate/vue/core', 'Vue 核心面试题'],
+      ['/web/vue/core', 'Vue 原理'],
+      ['/web/vue/vueCode', 'Vue 实现原理']
     ]
   }, {
     title: 'React',
     collapsable: true,
     children: [
-      // ['/part2/summary/sum1', '总结 - Node流操作'],
     ]
   }, {
     title: 'Angular',
     collapsable: true,
     children: [
-      // ['/part2/summary/sum1', '总结 - Node流操作'],
     ]
   }]
 }]
