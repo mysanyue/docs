@@ -13,5 +13,3 @@ title: VuePress 项目
 2. `yarn build` 运行 build
 
 线上地址：[www.pro.58taoweb.com](https://www.pro.58taoweb.com/)
-线上地址：[www.pro.58taoweb.com](https://www.pro.58taoweb.com/)
-线上地址：[www.pro.58taoweb.com](https://www.pro.58taoweb.com/)
