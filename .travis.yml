@@ -1,4 +1,4 @@
-name: Publish And Deploy Demo
+name: www.ms.58taoweb.com
 
 language: node_js
 
@@ -10,6 +10,7 @@ install:
 
 script:
   - yarn docs:build # npm run docs:build
+  - yarn deploy
   - yarn cname
   
 deploy:
@@ -20,3 +21,9 @@ deploy:
   keep_history: true
   on:
     branch: master
+    
+branches:
+  except:
+  - dev
+  only:
+  - master
