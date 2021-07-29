@@ -13,7 +13,7 @@ cd docs/.vuepress/dist
 echo 'www.ms.58taoweb.com' > CNAME
 
 git add -A
-git commit -m 'deploy'
+git commit -m 'travis ci'
 
 git push -f git@github.com:mysanyue/docs.git master:gh-pages # 推送到github gh-pages分支
 
