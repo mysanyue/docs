@@ -1,6 +1,6 @@
 ---
 navbar: true
-title: javascript2
+title: VuePress 项目
 ---
 
 
@@ -12,4 +12,6 @@ title: javascript2
 2. `yarn dev` 运行 dev
 2. `yarn build` 运行 build
 
+线上地址：[www.pro.58taoweb.com](https://www.pro.58taoweb.com/)
+线上地址：[www.pro.58taoweb.com](https://www.pro.58taoweb.com/)
 线上地址：[www.pro.58taoweb.com](https://www.pro.58taoweb.com/)
