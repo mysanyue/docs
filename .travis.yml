@@ -31,6 +31,3 @@ branches:
   - dev
   only:
   - master
-
-
-
