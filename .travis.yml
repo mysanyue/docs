@@ -1,4 +1,4 @@
-name: Publish And Deploy Demo
+name: www.ms.58taoweb.com
 
 language: node_js
 
@@ -20,3 +20,9 @@ deploy:
   keep_history: true
   on:
     branch: master
+    
+branches:
+  except:
+  - dev
+  only:
+  - master
