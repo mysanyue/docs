@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>谈谈你对闭包的理解 | 三月风</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="海阔凭鱼跃，山高任鸟飞">
+    <meta name="author" content="三月风">
+    <meta name="keywords" content="vuepress 三月风，的文档笔记">
+    
+    <link rel="preload" href="/assets/css/0.styles.7841ddca.css" as="style"><link rel="preload" href="/assets/js/app.acf075ae.js" as="script"><link rel="preload" href="/assets/js/2.8a356b46.js" as="script"><link rel="preload" href="/assets/js/13.968ceebb.js" as="script"><link rel="preload" href="/assets/js/3.8abf82f5.js" as="script"><link rel="prefetch" href="/assets/js/10.72aee74f.js"><link rel="prefetch" href="/assets/js/11.a516632e.js"><link rel="prefetch" href="/assets/js/12.f0fe601d.js"><link rel="prefetch" href="/assets/js/14.b4a10b58.js"><link rel="prefetch" href="/assets/js/15.a4a7d7e1.js"><link rel="prefetch" href="/assets/js/16.e49d2280.js"><link rel="prefetch" href="/assets/js/17.3701dc86.js"><link rel="prefetch" href="/assets/js/18.e95df05e.js"><link rel="prefetch" href="/assets/js/19.80f37737.js"><link rel="prefetch" href="/assets/js/4.fab61d3e.js"><link rel="prefetch" href="/assets/js/5.a5643e96.js"><link rel="prefetch" href="/assets/js/6.9dc86913.js"><link rel="prefetch" href="/assets/js/7.1fa8c8f1.js"><link rel="prefetch" href="/assets/js/8.af1304ff.js"><link rel="prefetch" href="/assets/js/9.2748cce6.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.7841ddca.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">三月风</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/web/" class="nav-link router-link-active">
+  面试题
+</a></div><div class="nav-item"><a href="/bigFactory/" class="nav-link">
+  大厂面试题
+</a></div><div class="nav-item"><a href="https://github.com/mysanyue/docs" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/web/" class="nav-link router-link-active">
+  面试题
+</a></div><div class="nav-item"><a href="/bigFactory/" class="nav-link">
+  大厂面试题
+</a></div><div class="nav-item"><a href="https://github.com/mysanyue/docs" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>面试题</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>HTML</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>CSS</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading open"><span>JavaScript</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/web/js/" aria-current="page" class="sidebar-link">js 基础</a></li><li><a href="/web/js/js-base.html" aria-current="page" class="active sidebar-link">js 基础深入</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/web/js/js-base.html#谈谈你对闭包的理解" class="sidebar-link">谈谈你对闭包的理解</a></li><li class="sidebar-sub-header"><a href="/web/js/js-base.html#谈谈你对作用域的理解" class="sidebar-link">谈谈你对作用域的理解</a></li><li class="sidebar-sub-header"><a href="/web/js/js-base.html#了解原型链吗" class="sidebar-link">了解原型链吗</a></li><li class="sidebar-sub-header"><a href="/web/js/js-base.html#数组去重或数组扁平化-你实现一下" class="sidebar-link">数组去重或数组扁平化，你实现一下</a></li></ul></li></ul></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>Vue</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>React</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>Angular</span> <span class="arrow right"></span></p> <!----></section></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="谈谈你对闭包的理解"><a href="#谈谈你对闭包的理解" class="header-anchor">#</a> 谈谈你对闭包的理解</h2> <p><strong>闭包就是能够读取其他函数内部的变量</strong>，其<strong>优点是可以避免全局变量的污染</strong>，其<strong>缺点是闭包的变量不会被回收</strong>。</p> <h2 id="谈谈你对作用域的理解"><a href="#谈谈你对作用域的理解" class="header-anchor">#</a> 谈谈你对作用域的理解</h2> <p>作用域分为<strong>函数作用域</strong>，<strong>块级作用域</strong>，<strong>词法作用域</strong>，函数作用域指在函数内声明的所有变量在函数体内始终是可见的，可以在整个函数的范围内使用及复用；块级作用域指在变量声明的代码段之外是不可见的，如 ES6 的 <code>let</code> 以及 <code>const</code> ；词法作用域指函数在定义它们的作用域里运行，而不是在执行它们的作用域里运行，而 JavaScript 采用的就是词法作用域，也称为静态作用域。</p> <h2 id="了解原型链吗"><a href="#了解原型链吗" class="header-anchor">#</a> 了解原型链吗</h2> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">Foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token function-variable function">getName</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> 
+Foo<span class="token punctuation">.</span><span class="token function-variable function">getName</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token class-name">Foo</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">getName</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">var</span> <span class="token function-variable function">getName</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">function</span> <span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">//输出以下的输出结果</span>
+Foo<span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">Foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">new</span> <span class="token class-name">Foo<span class="token punctuation">.</span>getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">new</span> <span class="token class-name">Foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">new</span> <span class="token class-name">new</span> <span class="token function">Foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><blockquote><p>2，4，1，1，2，3，3</p></blockquote> <div class="custom-block tip"><p class="custom-block-title">解析</p> <p>第一个，<code>Foo.getName()</code> 其实就是函数 <code>Foo</code> 的静态方法，所以是 <code>2</code><br>
+第二个，<code>function</code> 有声明提升，声明后被 <code>var getName=</code> 覆盖，则 <code>getName</code> 为 <code>4</code><br>
+第三个，<code>Foo()</code> 的 <code>return this</code> 为 <code>window</code>，<code>window.getName</code> 在 <code>Foo</code> 里面被覆盖，则输出 <code>1</code><br>
+第四个，同上，因调用了 <code>Foo()</code> <code>window</code> 的 <code>getName</code> 被覆盖，所以还是 <code>1</code><br>
+第五个，相当于调用了 <code>Foo</code> 对象上的 <code>getName</code>，又因为 <code>Foo.getNname</code>，所以是 <code>2</code><br>
+第六个，相当于 <code>(new Foo()).getName()</code>，先执行了 <code>new Foo()</code>，返回一个实例对象，这个对象的 <code>getName</code> 为 <code>prototype</code> 上的 <code>getName</code>，所以是 <code>3</code><br>
+第七个，差不多。</p></div> <h2 id="数组去重或数组扁平化-你实现一下"><a href="#数组去重或数组扁平化-你实现一下" class="header-anchor">#</a> 数组去重或数组扁平化，你实现一下</h2> <ul><li>数组去重可以用 <code>Array.from(new Set(arr))</code>，<code>[...new Set(arr)]</code>，<code>splice()</code>，<code>indexOf()</code>，<code>includes()</code>，<code>Map()</code>，<code>Sort()</code></li> <li>数组扁平化可以用普通递归，<code>toString</code>，<code>reduce</code>，<code>some + 展开运算符</code>，<code>Array.prototype.flat</code>，<code>some + [].concat.apply</code></li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 那我就随便写一个了</span>
+<span class="token keyword">function</span> <span class="token function">flatten</span><span class="token punctuation">(</span><span class="token parameter">arr</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword">return</span> arr<span class="token punctuation">.</span><span class="token function">reduce</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">prev<span class="token punctuation">,</span> cur</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> prev<span class="token punctuation">.</span><span class="token function">concat</span><span class="token punctuation">(</span>Array<span class="token punctuation">.</span><span class="token function">isArray</span><span class="token punctuation">(</span>cur<span class="token punctuation">)</span> <span class="token operator">?</span> <span class="token function">flatten</span><span class="token punctuation">(</span>cur<span class="token punctuation">)</span> <span class="token operator">:</span> cur<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">更新时间:</span> <span class="time">2021年7月28日星期三 13:30</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/web/js/" class="prev router-link-active">
+        js 基础
+      </a></span> <span class="next"><a href="/web/vue/core.html">
+        Vue 原理
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.acf075ae.js" defer></script><script src="/assets/js/2.8a356b46.js" defer></script><script src="/assets/js/13.968ceebb.js" defer></script><script src="/assets/js/3.8abf82f5.js" defer></script>
+  </body>
+</html>
