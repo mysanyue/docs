@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>简述 css 盒子模型 | 三月风</title>
+    <title>css 基础 | 三月风</title>
     <meta name="generator" content="VuePress 1.8.2">
     <link rel="icon" href="/favicon.ico">
     <meta name="description" content="海阔凭鱼跃，山高任鸟飞">
     <meta name="author" content="三月风">
     <meta name="keywords" content="vuepress 三月风，的文档笔记">
     
-    <link rel="preload" href="/assets/css/0.styles.7841ddca.css" as="style"><link rel="preload" href="/assets/js/app.acf075ae.js" as="script"><link rel="preload" href="/assets/js/2.8a356b46.js" as="script"><link rel="preload" href="/assets/js/11.a516632e.js" as="script"><link rel="preload" href="/assets/js/3.8abf82f5.js" as="script"><link rel="prefetch" href="/assets/js/10.72aee74f.js"><link rel="prefetch" href="/assets/js/12.f0fe601d.js"><link rel="prefetch" href="/assets/js/13.968ceebb.js"><link rel="prefetch" href="/assets/js/14.b4a10b58.js"><link rel="prefetch" href="/assets/js/15.a4a7d7e1.js"><link rel="prefetch" href="/assets/js/16.e49d2280.js"><link rel="prefetch" href="/assets/js/17.3701dc86.js"><link rel="prefetch" href="/assets/js/18.e95df05e.js"><link rel="prefetch" href="/assets/js/19.80f37737.js"><link rel="prefetch" href="/assets/js/4.fab61d3e.js"><link rel="prefetch" href="/assets/js/5.a5643e96.js"><link rel="prefetch" href="/assets/js/6.9dc86913.js"><link rel="prefetch" href="/assets/js/7.1fa8c8f1.js"><link rel="prefetch" href="/assets/js/8.af1304ff.js"><link rel="prefetch" href="/assets/js/9.2748cce6.js">
+    <link rel="preload" href="/assets/css/0.styles.7841ddca.css" as="style"><link rel="preload" href="/assets/js/app.b5b105e3.js" as="script"><link rel="preload" href="/assets/js/2.8a356b46.js" as="script"><link rel="preload" href="/assets/js/11.a516632e.js" as="script"><link rel="preload" href="/assets/js/3.8abf82f5.js" as="script"><link rel="prefetch" href="/assets/js/10.72aee74f.js"><link rel="prefetch" href="/assets/js/12.f0fe601d.js"><link rel="prefetch" href="/assets/js/13.096900da.js"><link rel="prefetch" href="/assets/js/14.b4a10b58.js"><link rel="prefetch" href="/assets/js/15.a4a7d7e1.js"><link rel="prefetch" href="/assets/js/16.e49d2280.js"><link rel="prefetch" href="/assets/js/17.3701dc86.js"><link rel="prefetch" href="/assets/js/18.e95df05e.js"><link rel="prefetch" href="/assets/js/19.80f37737.js"><link rel="prefetch" href="/assets/js/4.fab61d3e.js"><link rel="prefetch" href="/assets/js/5.a5643e96.js"><link rel="prefetch" href="/assets/js/6.9dc86913.js"><link rel="prefetch" href="/assets/js/7.1fa8c8f1.js"><link rel="prefetch" href="/assets/js/8.af1304ff.js"><link rel="prefetch" href="/assets/js/9.2748cce6.js">
     <link rel="stylesheet" href="/assets/css/0.styles.7841ddca.css">
   </head>
   <body>
@@ -55,7 +55,7 @@ padding 内边距 自身边距到自身内容之间的距离<br> <strong>当需�
 两个相邻的外边距都是正数时，折叠结果是它们两者之间较大的值。两 个相邻的外边距都是负数时，折叠结果是两者绝对值的较大值。 两个外 边距一正一负时，折叠结果是两者的相加的和。</p> <h2 id="css-动画如何实现"><a href="#css-动画如何实现" class="header-anchor">#</a> css 动画如何实现</h2> <p>创建动画序列，需要使用 animation 属性或其子属性，该属性允许配置 动画时间、时长以及其他动画细节，但该属性不能配置动画的实际表现， 动画的实际表现是由 @keyframes 规则实现，具体情况参见使用 keyframes 定义动画序列小节部分。 transition 也可实现动画。 transition 强调过渡，是元素的一个或多个属性发生变化时产生的过渡 效果，同一个元素通过两个不同的途径获取样式，而第二个途径当某种 改变发生（例如 hover）时才能获取样式，这样就会产生过渡动画。</p> <h2 id="如何实现元素的垂直居中"><a href="#如何实现元素的垂直居中" class="header-anchor">#</a> 如何实现元素的垂直居中</h2> <ol><li>父元素 display: flex; align-items: center;</li> <li>元素绝对定位，top: 50%; margin-top: -(高度/2);</li> <li>高度不确定用 transform: translateY(-50%);</li> <li>父元素 table 布局，子元素设置 vertical-align: center;</li></ol> <h2 id="对-css-的新属性有了解过的吗"><a href="#对-css-的新属性有了解过的吗" class="header-anchor">#</a> 对 CSS 的新属性有了解过的吗</h2> <p>CSS3 的新特性中，在布局方面新增了 flex 布局，在选择器方面新增了<br>
 例如<br>
 first-of-type, nth-child 等选择器，在盒模型方面添加了 box-sizing 来改变盒模型，在动画方面增加了 animation，2d 变换，3d 变换 等，在颜色方面添加透明，rbga 等，在字体方面允许嵌入字体和设 置字体阴影，最后还有媒体查讯等</p> <h2 id="overflow-的原理"><a href="#overflow-的原理" class="header-anchor">#</a> overflow 的原理</h2> <p>要讲清楚这个解决方案的原理，首先需要了解块格式化上下文，块格式化上下文是 CSS 可视化渲染的一部分，它是一块区域，规 定了内部块盒 的渲染方式，以及浮动相互之间的影响关系<br>
-当元素设置了 overflow 样式且值部位 visible 时，该元素就构建了 一个 BFC，BFC 在计算高度时，内部浮动元素的高度也要计算在内， 也就是说技术 BFC 区域内只有一个浮动元素，BFC 的高度也不会发 生塌缩，所以达到了清除浮动的目的。</p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">更新时间:</span> <span class="time">2021年7月28日星期三 13:30</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+当元素设置了 overflow 样式且值部位 visible 时，该元素就构建了 一个 BFC，BFC 在计算高度时，内部浮动元素的高度也要计算在内， 也就是说技术 BFC 区域内只有一个浮动元素，BFC 的高度也不会发 生塌缩，所以达到了清除浮动的目的。</p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">更新时间:</span> <span class="time">2021年8月17日星期二 13:46</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
       ←
       <a href="/web/html/" class="prev">
         html 基础
@@ -64,6 +64,6 @@ first-of-type, nth-child 等选择器，在盒模型方面添加了 box-sizing �
       </a>
       →
     </span></p></div> </main></div><div class="global-ui"><!----></div></div>
-    <script src="/assets/js/app.acf075ae.js" defer></script><script src="/assets/js/2.8a356b46.js" defer></script><script src="/assets/js/11.a516632e.js" defer></script><script src="/assets/js/3.8abf82f5.js" defer></script>
+    <script src="/assets/js/app.b5b105e3.js" defer></script><script src="/assets/js/2.8a356b46.js" defer></script><script src="/assets/js/11.a516632e.js" defer></script><script src="/assets/js/3.8abf82f5.js" defer></script>
   </body>
 </html>
