@@ -18,7 +18,7 @@ module.exports = [{
     collapsable: true,
     children: [
       ['/web/js/', 'js 基础'],
-      ['/web/js/js-base', 'js 基础深入'],
+      ['/web/js/js-middle', 'js 基础深入'],
     ]
   }, {
     title: 'Vue',

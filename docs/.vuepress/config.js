@@ -16,5 +16,7 @@ module.exports = {
     lastUpdated: '更新时间',
     nav,
     sidebar
-  }
+  },
+  port: 1108,
+  host: 'localhost'
 }
