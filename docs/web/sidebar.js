@@ -17,8 +17,8 @@ module.exports = [{
     title: 'JavaScript',
     collapsable: true,
     children: [
-      ['/web/js/', 'js 基础'],
-      ['/web/js/js-middle', 'js 基础深入'],
+      ['/web/js/', '基础一'],
+      ['/web/js/middle', '中级一'],
     ]
   }, {
     title: 'Vue',
@@ -36,6 +36,12 @@ module.exports = [{
     title: 'Angular',
     collapsable: true,
     children: [
+    ]
+  }, {
+    title: '性能优化',
+    collapsable: true,
+    children: [
+      ['/web/performance/net', '网络相关']
     ]
   }]
 }]
