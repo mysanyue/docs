@@ -355,3 +355,34 @@ Function.prototype.bind = function(obj, arg) {
   return bound;
 }
 ```
+## 怎么控制一次加载一张图片，加载完后再加载下一张
+
+**方法一**
+
+```html
+<script type="text/javascript ">
+  var obj = new Image();
+  obj.src = "http://www.phpernote.com/uploadfiles/editor/201107240502201179.jpg";
+  obj.onload = function() {
+    alert('图片的宽度为： ' + obj.width + '；图片的 高度为：' + obj.height);
+    document.getElementById("mypic").innnerHTML = "<img src='" + this.src + "' />";
+  }
+</script>
+<div id="mypic">onloadi ng……</div>
+```
+
+**方法二**
+
+```html
+<script type="text/javascript">
+var obj = new Image();
+obj.src = "http://www.phpernote.com/uploadfiles/editor/201107240502201179.jpg";
+obj.onreadystatechange = function() {
+  if (this.readyState == " complete") {
+    alert('图片的宽度为： ' + obj.width + '；图片的 高度为：' + obj.height);
+    document.getElementById("mypic").innnerHTML = "<img src='" + this.src + "' />";
+  }
+}
+</script>
+<div id="mypic">onloadi ng……</div>
+```
