@@ -19,6 +19,7 @@ module.exports = [{
     children: [
       ['/web/js/', '基础一'],
       ['/web/js/middle', '中级一'],
+      ['/web/js/jq', 'jQuery'],
     ]
   }, {
     title: 'Vue',
