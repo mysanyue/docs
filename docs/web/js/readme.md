@@ -510,7 +510,7 @@ jsonp 原理：(动态创建 script 标签，回调函数) 浏览器在 js 请�
 为什么不是真正的 ajax?
 
 1. ajax 和 jsonp 这两种技术在调用方式上"看起来"很像，目的也一样， 都是请求一个 url，然后把服务器返回的数据进行处理，因此 jquery 和 ext 等框架都把 jsonp 作为 ajax 的一种形式进行了封装；
-2. 但 ajax 和 jsonp 其实本质上是不同的东西。ajax 的核心是通过 XmlHttpRequest获取本页内容，而jsonp的核心则是动态添加<script> 标签来调用服务器提供的 js 脚本。
+2. 但 ajax 和 jsonp 其实本质上是不同的东西。ajax 的核心是通过 XmlHttpRequest获取本页内容，而jsonp的核心则是动态添加`<script>` 标签来调用服务器提供的 js 脚本。
 3. 所以说，其实 ajax 与 jsonp 的区别不在于是否跨域，ajax 通过服务 端代理一样可以实现跨域，jsonp 本身也不排斥同域的数据的获取。
 4. 还有就是，jsonp 是一种方式或者说非强制协议，如同 ajax 一样，它也不一定非要 json 格式来传递数据，如果你愿意，字符换也行，只不过 这样不利于 jsonp 提供公开服务。
 
