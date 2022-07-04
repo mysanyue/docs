@@ -6,14 +6,18 @@ module.exports = [
       {
         title: 'HTML',
         collapsable: true,
-        children: [['/web/html/', 'html 基础']],
+        children: [
+          ['/web/html/htmlBase1', 'HTML 基础一'],
+          ['/web/html/h5', 'H5 面试题'],
+        ],
       },
       {
         title: 'CSS',
         collapsable: true,
         children: [
-          ['/web/css/', 'css 基础'],
-          ['/web/css/base', 'css 基础 二'],
+          ['/web/css/cssBase1', 'CSS 基础一'],
+          ['/web/css/cssBase2', 'CSS 基础 二'],
+          ['/web/css/css3', 'CSS3 面试题'],
         ],
       },
       {
