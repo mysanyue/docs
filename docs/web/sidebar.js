@@ -21,6 +21,11 @@ module.exports = [
         ],
       },
       {
+        title: '微信小程序',
+        collapsable: true,
+        children: [['/web/wechat/ms1', '微信小程序一']],
+      },
+      {
         title: 'JavaScript',
         collapsable: true,
         children: [
