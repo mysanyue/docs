@@ -1,7 +1,11 @@
 module.exports = [
-  { text: '首页', link: '/' },
-  { text: '面试题', link: '/web/' },
-  { text: '大厂面试题', link: '/bigFactory/' },
+  { text: 'HTML', link: '/html/htmlBase1' },
+  { text: 'CSS', link: '/css/cssBase1' },
+  { text: 'JavaScript', link: '/js/base1/' },
+  { text: 'Vue', link: '/vue/core/' },
+  { text: 'Wechat', link: '/wechat/ms1/' },
+  { text: '算法', link: '/suanf/base/' },
+  { text: '网络相关', link: '/performance/base/' },
   { text: '自学考试', link: '/selfExamin/' },
-  { text: 'GitHub', link: 'https://github.com/mysanyue/docs' },
+  // { text: 'GitHub', link: 'https://github.com/mysanyue/docs' },
 ]

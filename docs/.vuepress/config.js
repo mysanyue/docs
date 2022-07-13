@@ -15,8 +15,8 @@ module.exports = {
   themeConfig: {
     lastUpdated: '更新时间',
     nav,
-    sidebar
+    sidebar,
   },
   port: 1108,
-  host: 'localhost'
+  host: 'localhost',
 }
