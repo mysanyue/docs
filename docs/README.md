@@ -2,9 +2,9 @@
 home: true
 # heroImage: /assets/logo.jpg
 heroText: 前端面试
-tagline: 为面试准备
+tagline: 为跳槽准备
 actionText: 开始刷题 →
-actionLink: /web/
+actionLink: /html/htmlBase1
 features:
   - title: 面试题整理
     details: 整理收集的各种前端面试题
