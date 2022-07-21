@@ -247,3 +247,67 @@ wx.miniProgram.switchTab({ url: '/pages/index/index' })
 ## 微信支付的流程简单说一下
 
 ![wechat-play](/assets/images/wechat-play.png)
+
+## 如何自定义 tabBar
+
+- 现在小程序官方提供了 自定义 tabBar 的能力，根据官方提供的 demo 很容易就可以实 现自定义 tabBar。
+- 但是要实现 tab 选中态，要在当前页面下，通过 getTabBar 接口获取组件实例，并调用 setData 更新选中态。
+- 下载官方提供的 demo，然后合并到自己的代码中。
+- 配置信息：在 app.json 中的 tabBar 项指定 custom 字段，同时其余 tabBar 相关配 置也补充完整。
+- 所有 tab 页的 json 里需声明 usingComponents 项，也可以在 app.json 全局开启。 添加 tabBar 代码相关文件。
+- 编写 tabBar 代码：用自定义组件的方式编写即可，该自定义组件完全接管 tabBar 的渲 染。另外，自定义组件新增 getTabBar 接口，可获取当前页面下的自定义 tabBar 组件 实例。
+
+## 说一下小程序页面之间的传值
+
+- URL 传值 这种方式最常用，比如通过 `wx.navigateTo({})` 直接通过跳转页面的 URL 进行传值： `wx.navigateTo({ url: '../detail/detail?cid=' + cid + '&access_token=' + access_token; })`<br>
+  然后在另一个页面通过 options 进行接收： `onLoad: function (options) { console.log('cid =' + options.cid);console.log('access_token =' + options.access_token); }` 这种传值方式只适合值比较少的时候使用。
+
+- 本地缓存 传值比较多的时候，建议写本地缓存进行传值。小程序 API 提供了本地缓存数据的 API，默认可以缓存 10M 的数据：`wx.setStorageSync('checkin', checkin);` 在需要的页面直接调用 wx.getStorageSync 即可获取到存储的本地缓存数据。
+
+- 全局 app 我们可以利用 app.js 和 app.wxss 中的代码都是全局生效的这一特性，在不同页面之间 进行传值。
+
+  ```js
+  App({
+    // 全局变量
+    globalData: { host: 'https://xxx/xcx', version: 2, versionFeature: '更新说明' },
+  })
+  ```
+
+  在使用的页面中通过引入 app.js 来使用定义的全局变量。
+
+  ```js
+  const app = getApp()
+  let app_host = app.globalData.host
+  ```
+
+## 本地图片资源无法通过 wxss 获取
+
+本地资源图片无法通过 WXSS 获取，可以使用网络图片，或者 base64，或者使用标签来 解决。
+
+## wx.navigateTo 无法打开页面是为什么？如何解决
+
+一个应用同时只能打开 5 个页面，当已经打开了 5 个页面之后，wx.navigateTo 不能正常 打开新页面。请避免多层级的交互方式，或者使用 wx.redirectTo。
+
+## tabBar 设置不显示
+
+tabBar 设置不显示有如下几个原因：
+
+1. tabBar 的数量少于 2 项或超过 5 项都不会显示；
+2. tabBar 写法错误导致不显示；
+3. tabBar 没有写 pagePath 字段（程序启动后显示的第一个页面）
+
+## 小程序调用后台接口遇到哪些问题
+
+数据的大小有限制，超过范围会直接导致整个小程序崩溃，除非重启小程序；<br>
+小程序不可以直接渲染文章内容页这类型的 html 文本内容，若需显示要借助插件，但插件 渲染会导致页面加载变慢，所以最好在后台对文章内容的 html 进行过滤，后台直接处理批 量替换 p 标签 div 标签为 view 标签，然后其它的标签让插件来做，减轻前端处理的时间。
+
+## 小程序的登录流程
+
+- 调用 wx.login() 获取 code
+- 调用 wx.request() 发送 code 到我们自己的服务器（我们自己的服务器会返回一个登录 状态的标识，比如 token）
+- 将登录状态的标识 token 进行存储，以便下次使用
+- 请求需要登录状态的接口时，带上这个 token
+
+## 请谈谈微信小程序作用
+
+小程序是一种不需要下载安装即可使用的应用，它实现了应用“触手可及”的梦想，用户 扫一扫或者搜一下即可打开应用。也体现了“用完即走”的理念，用户不用关心是否安装 太多应用的问题。应用将无处不在，随时可用，但又无需安装卸载。对于开发者而言，小 程序开发门槛相对较低，难度不及 APP，能够满足简单的基础应用，适合生活服务类线下 商铺以及非刚需低频应用的转换。

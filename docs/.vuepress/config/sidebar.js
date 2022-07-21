@@ -7,6 +7,8 @@ module.exports = {
   '/wechat/': require('../../wechat/sidebar'),
   '/suanf/': require('../../suanf/sidebar'),
   '/performance/': require('../../performance/sidebar'),
+  '/node/': require('../../node/sidebar'),
+  '/react/': require('../../node/sidebar'),
   // 大厂
   '/bigFactory/': require('../../bigFactory/sidebar'),
   '/selfExamin/': require('../../selfExamin/sidebar'),
