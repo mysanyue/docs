@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>keep-alive 组件有什么作用 | 三月风-整理的面试题</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="海阔凭鱼跃，山高任鸟飞">
+    <meta name="author" content="三月风">
+    <meta name="keywords" content="vuepress 三月风，的文档笔记">
+    
+    <link rel="preload" href="/assets/css/0.styles.7841ddca.css" as="style"><link rel="preload" href="/assets/js/app.b50306bc.js" as="script"><link rel="preload" href="/assets/js/2.bd273a66.js" as="script"><link rel="preload" href="/assets/js/21.f8b415ed.js" as="script"><link rel="preload" href="/assets/js/3.3659927b.js" as="script"><link rel="prefetch" href="/assets/js/10.6d4cafc1.js"><link rel="prefetch" href="/assets/js/11.44eaddcc.js"><link rel="prefetch" href="/assets/js/12.7c868b61.js"><link rel="prefetch" href="/assets/js/13.10be3d6e.js"><link rel="prefetch" href="/assets/js/14.1a0a09bc.js"><link rel="prefetch" href="/assets/js/15.ad61a1cf.js"><link rel="prefetch" href="/assets/js/16.97723887.js"><link rel="prefetch" href="/assets/js/17.e5c5e747.js"><link rel="prefetch" href="/assets/js/18.780f8e34.js"><link rel="prefetch" href="/assets/js/19.4c1ef670.js"><link rel="prefetch" href="/assets/js/20.53af6160.js"><link rel="prefetch" href="/assets/js/22.fd619030.js"><link rel="prefetch" href="/assets/js/23.9d210d87.js"><link rel="prefetch" href="/assets/js/24.152afd42.js"><link rel="prefetch" href="/assets/js/25.5697301b.js"><link rel="prefetch" href="/assets/js/26.eb5a3a52.js"><link rel="prefetch" href="/assets/js/27.296a5b84.js"><link rel="prefetch" href="/assets/js/28.c6f796a2.js"><link rel="prefetch" href="/assets/js/29.3f7aba88.js"><link rel="prefetch" href="/assets/js/30.6854eb4e.js"><link rel="prefetch" href="/assets/js/31.e9b26028.js"><link rel="prefetch" href="/assets/js/32.f68f3a53.js"><link rel="prefetch" href="/assets/js/33.1761b514.js"><link rel="prefetch" href="/assets/js/34.17e2e48b.js"><link rel="prefetch" href="/assets/js/35.8a066a9c.js"><link rel="prefetch" href="/assets/js/36.fc0d1848.js"><link rel="prefetch" href="/assets/js/37.d5388dd7.js"><link rel="prefetch" href="/assets/js/38.851c1288.js"><link rel="prefetch" href="/assets/js/4.2c0e1b26.js"><link rel="prefetch" href="/assets/js/5.44ef7197.js"><link rel="prefetch" href="/assets/js/6.a9c2280f.js"><link rel="prefetch" href="/assets/js/7.c5d64862.js"><link rel="prefetch" href="/assets/js/8.445740d2.js"><link rel="prefetch" href="/assets/js/9.457f3120.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.7841ddca.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">三月风-整理的面试题</span></a> <div class="links"><!----> <nav class="nav-links can-hide"><div class="nav-item"><a href="/web/html/htmlBase1/" class="nav-link">
+  Web
+</a></div><div class="nav-item"><a href="/node/msBase/" class="nav-link">
+  Node
+</a></div><div class="nav-item"><a href="/react/msBase/" class="nav-link">
+  React
+</a></div><div class="nav-item"><a href="/vue/core/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/wechat/ms1/" class="nav-link">
+  Wechat
+</a></div><div class="nav-item"><a href="/suanf/base/" class="nav-link">
+  算法
+</a></div><div class="nav-item"><a href="/performance/base/" class="nav-link">
+  网络相关
+</a></div><div class="nav-item"><a href="/selfExamin/" class="nav-link">
+  自学考试
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/web/html/htmlBase1/" class="nav-link">
+  Web
+</a></div><div class="nav-item"><a href="/node/msBase/" class="nav-link">
+  Node
+</a></div><div class="nav-item"><a href="/react/msBase/" class="nav-link">
+  React
+</a></div><div class="nav-item"><a href="/vue/core/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/wechat/ms1/" class="nav-link">
+  Wechat
+</a></div><div class="nav-item"><a href="/suanf/base/" class="nav-link">
+  算法
+</a></div><div class="nav-item"><a href="/performance/base/" class="nav-link">
+  网络相关
+</a></div><div class="nav-item"><a href="/selfExamin/" class="nav-link">
+  自学考试
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Vue</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/vue/core.html" class="sidebar-link">Vue 原理</a></li><li><a href="/vue/vueCode.html" class="sidebar-link">Vue 实现原理</a></li><li><a href="/vue/msBase.html" aria-current="page" class="active sidebar-link">Vue 基础面试题</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/vue/msBase.html#keep-alive-组件有什么作用" class="sidebar-link">keep-alive 组件有什么作用</a></li><li class="sidebar-sub-header"><a href="/vue/msBase.html#说下-vue-生命周期钩子函数" class="sidebar-link">说下 vue 生命周期钩子函数</a></li><li class="sidebar-sub-header"><a href="/vue/msBase.html#vue-组件中-data-必须是一个函数" class="sidebar-link">vue 组件中 data 必须是一个函数</a></li><li class="sidebar-sub-header"><a href="/vue/msBase.html#vue-中-v-if-和-v-show-有什么区别" class="sidebar-link">Vue 中 v-if 和 v-show 有什么区别</a></li><li class="sidebar-sub-header"><a href="/vue/msBase.html#vue-中-computed-和-watch-有什么区别" class="sidebar-link">Vue 中 computed 和 watch 有什么区别</a></li><li class="sidebar-sub-header"><a href="/vue/msBase.html#vue-router-路由有哪些模式" class="sidebar-link">Vue-router 路由有哪些模式</a></li><li class="sidebar-sub-header"><a href="/vue/msBase.html#vue-cli-项目中-assets-和-static-文件夹有什么区别" class="sidebar-link">Vue-cli 项目中 assets 和 static 文件夹有什么区别</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="keep-alive-组件有什么作用"><a href="#keep-alive-组件有什么作用" class="header-anchor">#</a> keep-alive 组件有什么作用</h2> <ul><li>keep-alive 是 vue 的内置组件，而这个组件的作用就是能够缓存不活动的组件。一般情 况下，组件进行切换的时候，默认是会进行销毁的，如果我们有需求，在某个组件切换后 不进行销毁，而是保存之前的状态，那么就可以利用 keep-alive 来实现。</li> <li>在 keep-alive 上有两个属性，可以对字符串或正则表达式进行匹配，匹配到的组件会被缓存。</li> <li>include 值为字符串或者正则表达式匹配的组件 name 会被缓存。（缓存匹配到的组件） exclude 值为字符串或正则表达式匹配的组件 name 不会被缓存。（排除匹配到的组件） 其拥有两个独立的生命周期钩子函数 actived 和 deactived，使用 keep-alive 包裹的组 件在切换时不会被销毁，而是缓存到内存中并执行 deactived 钩子函数，命中缓存渲染后 会执行 actived 钩子函数。</li></ul> <h2 id="说下-vue-生命周期钩子函数"><a href="#说下-vue-生命周期钩子函数" class="header-anchor">#</a> 说下 vue 生命周期钩子函数</h2> <p>每个 vue 实例在被创建时都要经过一系列的初始化过程。<br>
+所有的生命周期钩子自动绑定 this 上下文到实例中，因此可以在函数中访问数据，对属性 和方法进行运算。这意味着不能使用箭头函数来定义一个生命周期方法【这是因为箭头函 数绑定了父上下文，因此 this 与你期待的 Vue 实例不同】。</p> <p><strong>阶段一 Vue 实例创建阶段</strong></p> <ul><li>beforeCreate
+Vue 实例在内存中刚被创建，this 变量还不能使用，数据对象（data）和方法（methods） 未初始化，watcher 中的事件都不能获得到；</li> <li>created 实例已经在内存中创建好，数据和方法已经初始化完成，但是模板还未编译，页面还是没 有内容，还不能对 dom 节点进行操作（此时访问 this.$el 和 this.$refs.xxx 都是 undefined）</li> <li>beforeMounte 找到对应的 template 模板，编译成 render 函数，转换成虚拟 dom，此时模板已经编 译完成，数据未挂载到页面，也就是说在这个阶段你可以看到标签间的双花括号，数据还 未渲染到页面中；<br>
+在 beforeMounte 之后和 mounted 之前，还有渲染 render 函数，它的作用是把模板 渲染成虚拟 dom。</li> <li>mounted 模板编译好了，虚拟 dom 渲染成真正的 dom 标签，数据渲染到页面，此时 Vue 实例已 经创建完毕，如果没有其他操作的话，Vue 实例会静静的躺在内存中，一动不动。
+一般会在 mounted 中来渲染从后端获取的数据。(页面初始化时，如果有操作 dom 的 事件一般也会放在 mounted 钩子函数中。当然，也可以放在 create 中，前提需使用 this.$nextTick(function(){})，在回调函数中操作 dom。)</li></ul> <p><strong>阶段二：Vue 实例运行阶段</strong></p> <ul><li>beforeUpdate 数据依赖改变或者用 $forceUpdata 强制刷新时，对象 data 中的数据已经更改（虚拟 dom 已经重新渲染），但是 页面中的值还是原来，未改变，因为此时还未开始渲染 dom；</li> <li>update 此时 data 中的数据和页面更新完毕，页面已经被重新渲染。在实际开发中，一般会用监听器 watch 来代替上边 2 个方法，因为 watch 会知道是哪一 个数据变化。</li></ul> <p><strong>阶段三：Vue 实例销毁阶段</strong></p> <ul><li>beforeDestroy 实例销毁前使用，在此刻实例还是可用的。</li> <li>destroyed Vue 实例被销毁，观察者、子组件、事件监听被清除（页面数据不会消失，只不过是响应 式无效了）。</li></ul> <h2 id="vue-组件中-data-必须是一个函数"><a href="#vue-组件中-data-必须是一个函数" class="header-anchor">#</a> vue 组件中 data 必须是一个函数</h2> <p>如果 data 是一个对象，当复用组件时，因为 data 都会指向同一个引用类型地址，其中 一个组件的 data 一旦发生修改，则其他重用的组件中的 data 也会被一并修改。<br>
+如果 data 是一个返回对象的函数，因为每次重用组件时返回的都是一个新对象，引用地 址不同，便不会出现如上问题。</p> <h2 id="vue-中-v-if-和-v-show-有什么区别"><a href="#vue-中-v-if-和-v-show-有什么区别" class="header-anchor">#</a> Vue 中 v-if 和 v-show 有什么区别</h2> <p>v-if 在进行切换时，会直接对标签进行创建或销毁，不显示的标签不会加载在 DOM 树中。 v-show 在进行切换时，会对标签的 display 属性进行切换，通过 display 不显示来隐藏 元素。<br>
+一般来说，v-if 的性能开销会比 v-show 大，切换频繁的标签更适合使用 v-show。</p> <h2 id="vue-中-computed-和-watch-有什么区别"><a href="#vue-中-computed-和-watch-有什么区别" class="header-anchor">#</a> Vue 中 computed 和 watch 有什么区别</h2> <p><strong>计算属性 computed：</strong></p> <ul><li>支持缓存，只有依赖数据发生变化时，才会重新进行计算函数；</li> <li>计算属性内不支持异步操作；</li> <li>计算属性的函数中都有一个 get(默认具有，获取计算属性)和 set(手动添加，设置计算属 性)方法；</li> <li>计算属性是自动监听依赖值的变化，从而动态返回内容。</li></ul> <p><strong>侦听属性 watch：</strong></p> <ul><li>不支持缓存，只要数据发生变化，就会执行侦听函数；</li> <li>侦听属性内支持异步操作；</li> <li>侦听属性的值可以是一个对象，接收 handler 回调，deep，immediate 三个属性；</li> <li>监听是一个过程，在监听的值变化时，可以触发一个回调，并做一些其他事情。</li></ul> <h2 id="vue-router-路由有哪些模式"><a href="#vue-router-路由有哪些模式" class="header-anchor">#</a> Vue-router 路由有哪些模式</h2> <p><strong>一般有两种模式：</strong></p> <p>hash 模式：后面的 hash 值的变化，浏览器既不会向服务器发出请求，浏览器也不会刷新，每次 hash 值的变化会触发 hashchange 事件。<br>
+history 模式：利用了 HTML5 中新增的 pushState() 和 replaceState() 方法。这两个方法应用于浏览器的历史记录栈，在当前已有的 back、forward、go 的基础之上，它们提供了对历史记录进行修改的功能。只是当它们执行修改时，虽然改变了当前的 URL，但浏览器不会立即向后端发送请求。</p> <h2 id="vue-cli-项目中-assets-和-static-文件夹有什么区别"><a href="#vue-cli-项目中-assets-和-static-文件夹有什么区别" class="header-anchor">#</a> Vue-cli 项目中 assets 和 static 文件夹有什么区别</h2> <p>两者都是用于存放项目中所使用的静态资源文件的文件夹。其区别在于：assets 中的文件在运行 npm run build 的时候会打包，简单来说就是会被压缩体积，代码格式化之类的。打包之后也会放到 static 中。static 中的文件则不会被打包。</p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">更新时间:</span> <span class="time">2022年7月24日星期日 14:34</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/vue/vueCode.html" class="prev">
+        Vue 实现原理
+      </a></span> <!----></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.b50306bc.js" defer></script><script src="/assets/js/2.bd273a66.js" defer></script><script src="/assets/js/21.f8b415ed.js" defer></script><script src="/assets/js/3.3659927b.js" defer></script>
+  </body>
+</html>
