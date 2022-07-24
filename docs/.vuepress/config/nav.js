@@ -1,7 +1,5 @@
 module.exports = [
-  { text: 'HTML', link: '/html/htmlBase1' },
-  { text: 'CSS', link: '/css/cssBase1' },
-  { text: 'JavaScript', link: '/js/base1/' },
+  { text: 'Web', link: '/web/html/htmlBase1/' },
   { text: 'Node', link: '/node/msBase/' },
   { text: 'React', link: '/react/msBase/' },
   { text: 'Vue', link: '/vue/core/' },

@@ -1,8 +1,6 @@
 module.exports = {
   // 前端高频面试题
-  '/html/': require('../../html/sidebar'),
-  '/css/': require('../../css/sidebar'),
-  '/js/': require('../../js/sidebar'),
+  '/web/': require('../../web/sidebar'),
   '/vue/': require('../../vue/sidebar'),
   '/wechat/': require('../../wechat/sidebar'),
   '/suanf/': require('../../suanf/sidebar'),
