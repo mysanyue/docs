@@ -10,4 +10,5 @@ module.exports = {
   // 大厂
   '/bigFactory/': require('../../bigFactory/sidebar'),
   '/selfExamin/': require('../../selfExamin/sidebar'),
+  '/self/': require('../../self/sidebar'),
 }

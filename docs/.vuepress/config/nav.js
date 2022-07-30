@@ -6,6 +6,7 @@ module.exports = [
   { text: 'Wechat', link: '/wechat/ms1/' },
   { text: '算法', link: '/suanf/base/' },
   { text: '网络相关', link: '/performance/base/' },
+  { text: '面经', link: '/self/ms1/' },
   { text: '自学考试', link: '/selfExamin/' },
   // { text: 'GitHub', link: 'https://github.com/mysanyue/docs' },
 ]
