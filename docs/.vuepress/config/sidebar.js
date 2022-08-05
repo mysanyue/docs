@@ -6,7 +6,7 @@ module.exports = {
   '/suanf/': require('../../suanf/sidebar'),
   '/performance/': require('../../performance/sidebar'),
   '/node/': require('../../node/sidebar'),
-  '/react/': require('../../node/sidebar'),
+  '/react/': require('../../react/sidebar'),
   // 大厂
   '/bigFactory/': require('../../bigFactory/sidebar'),
   '/selfExamin/': require('../../selfExamin/sidebar'),
