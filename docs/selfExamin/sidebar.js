@@ -4,9 +4,8 @@ module.exports = [
     collapsable: true,
     sidebarDepth: 2,
     children: [
-      ['/selfExamin/resourceCon', '信息资源建设'],
-      ['/selfExamin/informationCon', '信息咨询'],
-      ['/selfExamin/infomationRules', '信息政策与法规'],
+      ['/selfExamin/2020', '信息资源建设 2020 年'],
+      ['/selfExamin/2017', '信息资源建设 2017 年'],
     ],
   },
 ]
